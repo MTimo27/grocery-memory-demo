@@ -1,0 +1,799 @@
+{
+  "household_id": "hh_001",
+  "orders": [
+    {
+      "id": "order_01",
+      "week": 1,
+      "date": "2026-04-20",
+      "items": [
+        {
+          "product_id": "bread_whole_grain",
+          "qty": 1
+        },
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "pasta_penne",
+          "qty": 1
+        },
+        {
+          "product_id": "pasta_sauce",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_regular",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "id": "order_02",
+      "week": 2,
+      "date": "2026-04-27",
+      "items": [
+        {
+          "product_id": "bread_whole_grain",
+          "qty": 1
+        },
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "rice_basmati",
+          "qty": 1
+        },
+        {
+          "product_id": "spinach",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_regular",
+          "qty": 2
+        },
+        {
+          "product_id": "yoghurt_greek",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "order_03",
+      "week": 3,
+      "date": "2026-05-04",
+      "items": [
+        {
+          "product_id": "bread_whole_grain",
+          "qty": 1
+        },
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "minced_beef",
+          "qty": 1
+        },
+        {
+          "product_id": "cucumber",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_lactose_free",
+          "qty": 2
+        },
+        {
+          "product_id": "cheese_lactose_free",
+          "qty": 1
+        }
+      ],
+      "note": "Please never send anything with peanuts - my son is allergic."
+    },
+    {
+      "id": "order_04",
+      "week": 4,
+      "date": "2026-05-11",
+      "items": [
+        {
+          "product_id": "bread_whole_grain",
+          "qty": 1
+        },
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "salmon_fillet",
+          "qty": 1
+        },
+        {
+          "product_id": "apples",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_lactose_free",
+          "qty": 2
+        },
+        {
+          "product_id": "yoghurt_lactose_free",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "order_05",
+      "week": 5,
+      "date": "2026-05-18",
+      "items": [
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "pasta_sauce",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_lactose_free",
+          "qty": 2
+        },
+        {
+          "product_id": "keto_bread",
+          "qty": 1
+        },
+        {
+          "product_id": "cauliflower_rice",
+          "qty": 1
+        },
+        {
+          "product_id": "avocado",
+          "qty": 1
+        },
+        {
+          "product_id": "keto_bar",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "id": "order_06",
+      "week": 6,
+      "date": "2026-05-25",
+      "items": [
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "spinach",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_regular",
+          "qty": 2
+        },
+        {
+          "product_id": "yoghurt_lactose_free",
+          "qty": 1
+        },
+        {
+          "product_id": "keto_bread",
+          "qty": 1
+        },
+        {
+          "product_id": "cauliflower_rice",
+          "qty": 1
+        },
+        {
+          "product_id": "avocado",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "order_07",
+      "week": 7,
+      "date": "2026-06-01",
+      "items": [
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "minced_beef",
+          "qty": 1
+        },
+        {
+          "product_id": "cucumber",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_lactose_free",
+          "qty": 2
+        },
+        {
+          "product_id": "cheese_lactose_free",
+          "qty": 1
+        },
+        {
+          "product_id": "keto_bread",
+          "qty": 1
+        },
+        {
+          "product_id": "cauliflower_rice",
+          "qty": 1
+        },
+        {
+          "product_id": "avocado",
+          "qty": 1
+        },
+        {
+          "product_id": "keto_bar",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "id": "order_08",
+      "week": 8,
+      "date": "2026-06-08",
+      "items": [
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "salmon_fillet",
+          "qty": 1
+        },
+        {
+          "product_id": "apples",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_lactose_free",
+          "qty": 2
+        },
+        {
+          "product_id": "yoghurt_lactose_free",
+          "qty": 1
+        },
+        {
+          "product_id": "keto_bread",
+          "qty": 1
+        },
+        {
+          "product_id": "cauliflower_rice",
+          "qty": 1
+        },
+        {
+          "product_id": "avocado",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "order_09",
+      "week": 9,
+      "date": "2026-06-15",
+      "items": [
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "pasta_sauce",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_lactose_free",
+          "qty": 2
+        },
+        {
+          "product_id": "keto_bread",
+          "qty": 1
+        },
+        {
+          "product_id": "cauliflower_rice",
+          "qty": 1
+        },
+        {
+          "product_id": "avocado",
+          "qty": 1
+        },
+        {
+          "product_id": "keto_bar",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "id": "order_10",
+      "week": 10,
+      "date": "2026-06-22",
+      "items": [
+        {
+          "product_id": "bread_whole_grain",
+          "qty": 1
+        },
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "rice_basmati",
+          "qty": 1
+        },
+        {
+          "product_id": "spinach",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_lactose_free",
+          "qty": 2
+        },
+        {
+          "product_id": "yoghurt_lactose_free",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "order_11",
+      "week": 11,
+      "date": "2026-06-29",
+      "items": [
+        {
+          "product_id": "bread_whole_grain",
+          "qty": 1
+        },
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "minced_beef",
+          "qty": 1
+        },
+        {
+          "product_id": "cucumber",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_lactose_free",
+          "qty": 2
+        },
+        {
+          "product_id": "cheese_lactose_free",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "order_12",
+      "week": 12,
+      "date": "2026-07-06",
+      "items": [
+        {
+          "product_id": "bread_whole_grain",
+          "qty": 1
+        },
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "salmon_fillet",
+          "qty": 1
+        },
+        {
+          "product_id": "apples",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_lactose_free",
+          "qty": 2
+        },
+        {
+          "product_id": "yoghurt_lactose_free",
+          "qty": 1
+        },
+        {
+          "product_id": "chips_paprika",
+          "qty": 6
+        },
+        {
+          "product_id": "chips_salted",
+          "qty": 3
+        },
+        {
+          "product_id": "beer_pils",
+          "qty": 2
+        },
+        {
+          "product_id": "cola",
+          "qty": 3
+        }
+      ],
+      "note": "Having friends over on Saturday."
+    },
+    {
+      "id": "order_13",
+      "week": 13,
+      "date": "2026-07-13",
+      "items": [
+        {
+          "product_id": "bread_whole_grain",
+          "qty": 1
+        },
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "pasta_penne",
+          "qty": 1
+        },
+        {
+          "product_id": "pasta_sauce",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_lactose_free",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "id": "order_14",
+      "week": 14,
+      "date": "2026-07-20",
+      "items": [
+        {
+          "product_id": "bread_whole_grain",
+          "qty": 1
+        },
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "rice_basmati",
+          "qty": 1
+        },
+        {
+          "product_id": "spinach",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_lactose_free",
+          "qty": 2
+        },
+        {
+          "product_id": "yoghurt_lactose_free",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "order_15",
+      "week": 15,
+      "date": "2026-07-27",
+      "items": [
+        {
+          "product_id": "bread_whole_grain",
+          "qty": 1
+        },
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "minced_beef",
+          "qty": 1
+        },
+        {
+          "product_id": "cucumber",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_lactose_free",
+          "qty": 2
+        },
+        {
+          "product_id": "cheese_lactose_free",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "order_16",
+      "week": 16,
+      "date": "2026-08-03",
+      "items": [
+        {
+          "product_id": "bread_whole_grain",
+          "qty": 1
+        },
+        {
+          "product_id": "bananas",
+          "qty": 1
+        },
+        {
+          "product_id": "eggs",
+          "qty": 1
+        },
+        {
+          "product_id": "chicken_breast",
+          "qty": 1
+        },
+        {
+          "product_id": "tomatoes",
+          "qty": 1
+        },
+        {
+          "product_id": "coffee_beans",
+          "qty": 1
+        },
+        {
+          "product_id": "salmon_fillet",
+          "qty": 1
+        },
+        {
+          "product_id": "apples",
+          "qty": 1
+        },
+        {
+          "product_id": "milk_lactose_free",
+          "qty": 2
+        },
+        {
+          "product_id": "yoghurt_lactose_free",
+          "qty": 1
+        }
+      ]
+    }
+  ]
+}

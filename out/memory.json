@@ -1,0 +1,281 @@
+[
+  {
+    "claim": "Household must never receive products containing peanuts due to a son's allergy",
+    "category": "hard_constraint",
+    "status": "explicit",
+    "evidence_refs": [
+      "order_03"
+    ],
+    "last_evidence": "2026-05-04",
+    "reliability": 1.0,
+    "expiry_days": null,
+    "scope": "member",
+    "topic": "peanut_allergy",
+    "version": 6
+  },
+  {
+    "claim": "Household has shifted to lactose-free milk and dairy products",
+    "category": "dietary_pref",
+    "status": "inferred",
+    "evidence_refs": [
+      "order_03",
+      "order_04",
+      "order_05",
+      "order_07",
+      "order_08",
+      "order_09",
+      "order_10",
+      "order_11",
+      "order_12"
+    ],
+    "last_evidence": "2026-07-06",
+    "reliability": 0.9,
+    "expiry_days": 90,
+    "scope": "household",
+    "topic": "lactose_free_dairy",
+    "version": 6
+  },
+  {
+    "claim": "Household follows a keto-style diet pattern with keto bread, cauliflower rice, avocado and keto bars",
+    "category": "dietary_pref",
+    "status": "inferred",
+    "evidence_refs": [
+      "order_05",
+      "order_06",
+      "order_07",
+      "order_08",
+      "order_09"
+    ],
+    "last_evidence": "2026-06-15",
+    "reliability": 0.563,
+    "expiry_days": 90,
+    "scope": "household",
+    "topic": "keto_diet",
+    "version": 1
+  },
+  {
+    "claim": "Household buys coffee beans every week",
+    "category": "brand_taste",
+    "status": "inferred",
+    "evidence_refs": [
+      "order_01",
+      "order_02",
+      "order_03",
+      "order_04",
+      "order_05",
+      "order_06",
+      "order_07",
+      "order_08",
+      "order_09",
+      "order_10",
+      "order_11",
+      "order_12"
+    ],
+    "last_evidence": "2026-07-06",
+    "reliability": 1.0,
+    "expiry_days": 90,
+    "scope": "household",
+    "topic": "coffee_beans_staple",
+    "version": 1
+  },
+  {
+    "claim": "Household buys bananas every week",
+    "category": "brand_taste",
+    "status": "inferred",
+    "evidence_refs": [
+      "order_01",
+      "order_02",
+      "order_03",
+      "order_04",
+      "order_05",
+      "order_06",
+      "order_07",
+      "order_08",
+      "order_09",
+      "order_10",
+      "order_11",
+      "order_12"
+    ],
+    "last_evidence": "2026-07-06",
+    "reliability": 1.0,
+    "expiry_days": 90,
+    "scope": "household",
+    "topic": "bananas_staple",
+    "version": 1
+  },
+  {
+    "claim": "Household buys chicken breast every week",
+    "category": "brand_taste",
+    "status": "inferred",
+    "evidence_refs": [
+      "order_01",
+      "order_02",
+      "order_03",
+      "order_04",
+      "order_05",
+      "order_06",
+      "order_07",
+      "order_08",
+      "order_09",
+      "order_10",
+      "order_11",
+      "order_12"
+    ],
+    "last_evidence": "2026-07-06",
+    "reliability": 1.0,
+    "expiry_days": 90,
+    "scope": "household",
+    "topic": "chicken_breast_staple",
+    "version": 1
+  },
+  {
+    "claim": "Household buys eggs every week",
+    "category": "brand_taste",
+    "status": "inferred",
+    "evidence_refs": [
+      "order_01",
+      "order_02",
+      "order_03",
+      "order_04",
+      "order_05",
+      "order_06",
+      "order_07",
+      "order_08",
+      "order_09",
+      "order_10",
+      "order_11",
+      "order_12"
+    ],
+    "last_evidence": "2026-07-06",
+    "reliability": 1.0,
+    "expiry_days": 90,
+    "scope": "household",
+    "topic": "eggs_staple",
+    "version": 1
+  },
+  {
+    "claim": "Household buys tomatoes every week",
+    "category": "brand_taste",
+    "status": "inferred",
+    "evidence_refs": [
+      "order_01",
+      "order_02",
+      "order_03",
+      "order_04",
+      "order_05",
+      "order_06",
+      "order_07",
+      "order_08",
+      "order_09",
+      "order_10",
+      "order_11",
+      "order_12"
+    ],
+    "last_evidence": "2026-07-06",
+    "reliability": 1.0,
+    "expiry_days": 90,
+    "scope": "household",
+    "topic": "tomatoes_staple",
+    "version": 1
+  },
+  {
+    "claim": "Household prefers whole grain bread",
+    "category": "brand_taste",
+    "status": "inferred",
+    "evidence_refs": [
+      "order_01",
+      "order_02",
+      "order_03",
+      "order_04",
+      "order_10",
+      "order_11",
+      "order_12"
+    ],
+    "last_evidence": "2026-07-06",
+    "reliability": 0.583,
+    "expiry_days": 90,
+    "scope": "household",
+    "topic": "whole_grain_bread_pref",
+    "version": 1
+  },
+  {
+    "claim": "Household hosts entertaining occasions with snacks, beer and soda for guests",
+    "category": "dietary_pref",
+    "status": "explicit",
+    "evidence_refs": [
+      "order_12"
+    ],
+    "last_evidence": "2026-07-06",
+    "reliability": 1.0,
+    "expiry_days": 90,
+    "scope": "occasion",
+    "topic": "entertaining_occasion",
+    "version": 1
+  },
+  {
+    "claim": "Household regularly cooks a minced beef and cucumber meal with lactose-free cheese",
+    "category": "brand_taste",
+    "status": "inferred",
+    "evidence_refs": [
+      "order_03",
+      "order_07",
+      "order_11"
+    ],
+    "last_evidence": "2026-06-29",
+    "reliability": 0.29,
+    "expiry_days": 90,
+    "scope": "household",
+    "topic": "minced_beef_cucumber_meal",
+    "version": 1
+  },
+  {
+    "claim": "Household regularly pairs salmon fillet with apples",
+    "category": "brand_taste",
+    "status": "inferred",
+    "evidence_refs": [
+      "order_04",
+      "order_08",
+      "order_12"
+    ],
+    "last_evidence": "2026-07-06",
+    "reliability": 0.333,
+    "expiry_days": 90,
+    "scope": "household",
+    "topic": "salmon_apples_meal",
+    "version": 1
+  },
+  {
+    "claim": "Household periodically buys pasta with pasta sauce",
+    "category": "brand_taste",
+    "status": "inferred",
+    "evidence_refs": [
+      "order_01",
+      "order_05",
+      "order_09"
+    ],
+    "last_evidence": "2026-06-15",
+    "reliability": 0.225,
+    "expiry_days": 90,
+    "scope": "household",
+    "topic": "pasta_sauce_pref",
+    "version": 1
+  },
+  {
+    "claim": "Household prefers lactose-free yoghurt",
+    "category": "brand_taste",
+    "status": "inferred",
+    "evidence_refs": [
+      "order_04",
+      "order_06",
+      "order_08",
+      "order_10",
+      "order_12"
+    ],
+    "last_evidence": "2026-07-06",
+    "reliability": 0.556,
+    "expiry_days": 90,
+    "scope": "household",
+    "topic": "yoghurt_lactose_free_pref",
+    "version": 1
+  }
+]

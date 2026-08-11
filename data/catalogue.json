@@ -1,0 +1,60 @@
+[
+  {"id": "milk_regular", "name": "Whole milk 1L", "tags": ["dairy", "milk"], "allergens": ["lactose"], "price": 1.29, "in_stock": true},
+  {"id": "milk_semi", "name": "Semi-skimmed milk 1L", "tags": ["dairy", "milk"], "allergens": ["lactose"], "price": 1.19, "in_stock": true},
+  {"id": "milk_lactose_free", "name": "Lactose-free milk 1L", "tags": ["dairy", "milk", "lactose_free"], "allergens": [], "price": 1.79, "in_stock": true},
+  {"id": "milk_oat", "name": "Oat drink 1L", "tags": ["plant_based", "milk"], "allergens": ["gluten"], "price": 1.99, "in_stock": true},
+
+  {"id": "yoghurt_greek", "name": "Greek yoghurt 500g", "tags": ["dairy", "yoghurt"], "allergens": ["lactose"], "price": 2.29, "in_stock": true},
+  {"id": "yoghurt_lactose_free", "name": "Lactose-free yoghurt 500g", "tags": ["dairy", "yoghurt", "lactose_free"], "allergens": [], "price": 2.69, "in_stock": true},
+  {"id": "yoghurt_fruit", "name": "Fruit yoghurt 4-pack", "tags": ["dairy", "yoghurt"], "allergens": ["lactose"], "price": 2.49, "in_stock": true},
+  {"id": "cheese_gouda", "name": "Young gouda slices 200g", "tags": ["dairy", "cheese"], "allergens": ["lactose"], "price": 3.19, "in_stock": true},
+  {"id": "cheese_lactose_free", "name": "Lactose-free cheese slices 200g", "tags": ["dairy", "cheese", "lactose_free"], "allergens": [], "price": 3.79, "in_stock": true},
+  {"id": "butter", "name": "Butter 250g", "tags": ["dairy"], "allergens": ["lactose"], "price": 2.59, "in_stock": true},
+
+  {"id": "bread_white", "name": "White bread loaf", "tags": ["bakery", "bread"], "allergens": ["gluten"], "price": 1.49, "in_stock": true},
+  {"id": "bread_whole_grain", "name": "Whole grain bread loaf", "tags": ["bakery", "bread"], "allergens": ["gluten"], "price": 1.99, "in_stock": true},
+  {"id": "bread_gluten_free", "name": "Gluten-free bread loaf", "tags": ["bakery", "bread", "gluten_free"], "allergens": [], "price": 3.49, "in_stock": true},
+  {"id": "croissants", "name": "Butter croissants 4-pack", "tags": ["bakery"], "allergens": ["gluten", "lactose"], "price": 2.29, "in_stock": true},
+
+  {"id": "pasta_penne", "name": "Penne 500g", "tags": ["pantry", "pasta"], "allergens": ["gluten"], "price": 1.09, "in_stock": true},
+  {"id": "pasta_wholewheat", "name": "Whole wheat spaghetti 500g", "tags": ["pantry", "pasta"], "allergens": ["gluten"], "price": 1.39, "in_stock": true},
+  {"id": "pasta_gluten_free", "name": "Gluten-free fusilli 400g", "tags": ["pantry", "pasta", "gluten_free"], "allergens": [], "price": 2.49, "in_stock": true},
+  {"id": "rice_basmati", "name": "Basmati rice 1kg", "tags": ["pantry"], "allergens": [], "price": 2.79, "in_stock": true},
+  {"id": "pasta_sauce", "name": "Tomato pasta sauce 500g", "tags": ["pantry"], "allergens": [], "price": 1.69, "in_stock": true},
+  {"id": "olive_oil", "name": "Olive oil 500ml", "tags": ["pantry"], "allergens": [], "price": 5.49, "in_stock": true},
+
+  {"id": "chips_paprika", "name": "Paprika crisps 200g", "tags": ["snacks"], "allergens": [], "price": 1.59, "in_stock": true},
+  {"id": "chips_salted", "name": "Salted crisps 200g", "tags": ["snacks"], "allergens": [], "price": 1.59, "in_stock": true},
+  {"id": "nuts_peanut", "name": "Roasted peanuts 300g", "tags": ["snacks", "nuts"], "allergens": ["peanut"], "price": 2.19, "in_stock": true},
+  {"id": "nuts_mixed", "name": "Mixed nuts 300g", "tags": ["snacks", "nuts"], "allergens": ["peanut", "tree_nut"], "price": 3.29, "in_stock": true},
+  {"id": "nuts_cashew", "name": "Cashews 200g", "tags": ["snacks", "nuts"], "allergens": ["tree_nut"], "price": 3.49, "in_stock": true},
+  {"id": "chocolate_dark", "name": "Dark chocolate 100g", "tags": ["snacks", "chocolate"], "allergens": [], "price": 1.89, "in_stock": false},
+  {"id": "chocolate_peanut", "name": "Peanut chocolate bar 100g", "tags": ["snacks", "chocolate"], "allergens": ["peanut", "lactose"], "price": 1.79, "in_stock": true},
+  {"id": "chocolate_milk_bar", "name": "Milk chocolate 100g", "tags": ["snacks", "chocolate"], "allergens": ["lactose"], "price": 1.69, "in_stock": true},
+  {"id": "peanut_butter", "name": "Peanut butter 350g", "tags": ["pantry", "spread"], "allergens": ["peanut"], "price": 2.39, "in_stock": true},
+  {"id": "jam_strawberry", "name": "Strawberry jam 450g", "tags": ["pantry", "spread"], "allergens": [], "price": 2.09, "in_stock": true},
+
+  {"id": "keto_bread", "name": "Keto low-carb bread", "tags": ["bakery", "keto", "low_carb"], "allergens": ["tree_nut"], "price": 4.29, "in_stock": true},
+  {"id": "almond_flour", "name": "Almond flour 500g", "tags": ["pantry", "keto", "low_carb"], "allergens": ["tree_nut"], "price": 5.99, "in_stock": true},
+  {"id": "keto_bar", "name": "Keto protein bar", "tags": ["snacks", "keto", "low_carb"], "allergens": ["tree_nut"], "price": 2.49, "in_stock": true},
+  {"id": "cauliflower_rice", "name": "Cauliflower rice 500g", "tags": ["produce", "keto", "low_carb"], "allergens": [], "price": 2.99, "in_stock": true},
+
+  {"id": "bananas", "name": "Bananas 1kg", "tags": ["produce", "fruit"], "allergens": [], "price": 1.99, "in_stock": true},
+  {"id": "apples", "name": "Apples 1kg", "tags": ["produce", "fruit"], "allergens": [], "price": 2.49, "in_stock": true},
+  {"id": "tomatoes", "name": "Tomatoes 500g", "tags": ["produce", "vegetable"], "allergens": [], "price": 1.89, "in_stock": true},
+  {"id": "cucumber", "name": "Cucumber", "tags": ["produce", "vegetable"], "allergens": [], "price": 0.99, "in_stock": true},
+  {"id": "spinach", "name": "Fresh spinach 300g", "tags": ["produce", "vegetable"], "allergens": [], "price": 1.79, "in_stock": true},
+  {"id": "avocado", "name": "Avocado 2-pack", "tags": ["produce", "keto", "low_carb"], "allergens": [], "price": 2.29, "in_stock": true},
+
+  {"id": "chicken_breast", "name": "Chicken breast 500g", "tags": ["meat"], "allergens": [], "price": 6.49, "in_stock": true},
+  {"id": "minced_beef", "name": "Minced beef 400g", "tags": ["meat"], "allergens": [], "price": 5.29, "in_stock": true},
+  {"id": "salmon_fillet", "name": "Salmon fillet 250g", "tags": ["fish"], "allergens": ["fish"], "price": 7.99, "in_stock": true},
+  {"id": "eggs", "name": "Free-range eggs 10-pack", "tags": ["dairy"], "allergens": ["egg"], "price": 3.09, "in_stock": true},
+  {"id": "tofu", "name": "Tofu 300g", "tags": ["plant_based"], "allergens": ["soy"], "price": 2.19, "in_stock": true},
+
+  {"id": "coffee_beans", "name": "Coffee beans 500g", "tags": ["drinks"], "allergens": [], "price": 6.99, "in_stock": true},
+  {"id": "tea_black", "name": "Black tea 40 bags", "tags": ["drinks"], "allergens": [], "price": 2.39, "in_stock": true},
+  {"id": "beer_pils", "name": "Pilsner beer 6-pack", "tags": ["drinks", "alcohol"], "allergens": ["gluten"], "price": 5.99, "in_stock": true},
+  {"id": "cola", "name": "Cola 1.5L", "tags": ["drinks", "soft_drink"], "allergens": [], "price": 1.89, "in_stock": true},
+  {"id": "sparkling_water", "name": "Sparkling water 1.5L", "tags": ["drinks"], "allergens": [], "price": 0.89, "in_stock": true}
+]
