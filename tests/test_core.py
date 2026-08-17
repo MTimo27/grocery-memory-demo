@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from dataclasses import dataclass
+from datetime import date
 from io import StringIO
 from types import SimpleNamespace
 
@@ -8,7 +10,17 @@ import pytest
 import build_memory
 import demo
 from grocery_memory_demo import agent, checks, evaluate, loading, memory, policy, storage
-from grocery_memory_demo.models import Arm, OrderItem, Scope, Status, Transcript, Verdict, to_dict
+from grocery_memory_demo.models import (
+    Arm,
+    MemoryItem,
+    Order,
+    OrderItem,
+    Scope,
+    Status,
+    Transcript,
+    Verdict,
+    to_dict,
+)
 
 HISTORY = storage.load_history()
 CATALOGUE = storage.load_catalogue()
@@ -369,3 +381,91 @@ def test_memory_without_a_policy_acts_on_everything_it_remembers():
     with_memory = REPLAY[Arm.WITH_MEMORY]
     assert with_memory.missed == 0
     assert with_memory.stale_errors == max(REPLAY[arm].stale_errors for arm in Arm)
+
+
+WEEK_BY_DATE = {order.date: order.week for order in HISTORY}
+WEEK_BY_ORDER_ID = {order.id: order.week for order in HISTORY}
+
+
+@dataclass
+class Prediction:
+    week: int
+    today: date
+    item: MemoryItem
+    known: list[Order]
+
+
+def replay_predictions(monkeypatch) -> list[Prediction]:
+    predictions: list[Prediction] = []
+    scored = evaluate.verdict
+
+    def recording_verdict(arm: Arm, item: MemoryItem, known: list[Order], today: date) -> Verdict:
+        if arm is Arm.WITH_VERDICTS:
+            predictions.append(
+                Prediction(week=WEEK_BY_DATE[today], today=today, item=item, known=known)
+            )
+        return scored(arm, item, known, today)
+
+    monkeypatch.setattr(evaluate, "verdict", recording_verdict)
+    evaluate.replay(MEMORY, HISTORY)
+    return predictions
+
+
+def items_by_week(predictions: list[Prediction], topic: str) -> dict[int, MemoryItem]:
+    scored_items = {}
+    for prediction in predictions:
+        if prediction.item.topic == topic:
+            scored_items[prediction.week] = prediction.item
+    return scored_items
+
+
+def test_every_prediction_scores_on_earlier_weeks_only(monkeypatch):
+    predictions = replay_predictions(monkeypatch)
+
+    predicted_weeks = set()
+    for prediction in predictions:
+        predicted_weeks.add(prediction.week)
+    assert predicted_weeks == {13, 14, 15, 16}
+
+    for prediction in predictions:
+        known_weeks = set()
+        for order in prediction.known:
+            known_weeks.add(order.week)
+        assert known_weeks == set(range(1, prediction.week))
+
+        for ref in prediction.item.evidence_refs:
+            assert WEEK_BY_ORDER_ID[ref] < prediction.week
+
+        assert prediction.item.last_evidence < prediction.today
+
+
+def test_a_confirmed_claim_absorbs_the_revealed_week_before_the_next_prediction(monkeypatch):
+    predictions = replay_predictions(monkeypatch)
+    lactose_free = items_by_week(predictions, "lactose_free_dairy")
+
+    refs_at_week_13 = lactose_free[13].evidence_refs
+    refs_at_week_16 = lactose_free[16].evidence_refs
+
+    assert refs_at_week_13[-1] == "order_12"
+    assert refs_at_week_16 == refs_at_week_13 + ["order_13", "order_14", "order_15"]
+    assert lactose_free[16].reliability > lactose_free[13].reliability
+
+
+def test_a_claim_the_revealed_weeks_contradict_gains_no_evidence_and_decays(monkeypatch):
+    predictions = replay_predictions(monkeypatch)
+    keto = items_by_week(predictions, "keto_diet")
+
+    assert keto[16].evidence_refs == keto[13].evidence_refs
+    assert keto[16].reliability < keto[13].reliability
+
+
+def test_rolling_updates_change_the_verdicts_a_frozen_memory_would_give(monkeypatch):
+    def never_reinforced(item: MemoryItem, _products: set[str], _revealed: Order) -> MemoryItem:
+        return item
+
+    monkeypatch.setattr(evaluate, "reinforced", never_reinforced)
+    frozen = evaluate.replay(MEMORY, HISTORY)[Arm.WITH_VERDICTS]
+    rolling = REPLAY[Arm.WITH_VERDICTS]
+
+    assert rolling.correct > frozen.correct
+    assert rolling.missed < frozen.missed

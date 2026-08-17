@@ -82,15 +82,16 @@ calculates their dates and reliability scores.
 
 ## Current replay result
 
-The offline replay trains on weeks 1–12 and evaluates three approaches over four held-out
-weeks:
+The offline replay trains on weeks 1–12, then rolls forward one week at a time: it predicts
+week 13 from weeks 1–12 only, reveals week 13 as new evidence, predicts week 14, and so on.
+No prediction sees its own week or any later one.
 
 ```text
 arm                       correct  stale  missed  asked  unsafe
 ---------------------------------------------------------------
-A  purchase counts             29      7       3      0       4
+A  purchase counts             29      8       3      0       4
 B  memory                      32     20       0      0       0
-C  memory + policy             24      2       6      7       0
+C  memory + policy             28      2       4      5       0
 ```
 
 These results come from one synthetic household. Raw memory often acts on outdated

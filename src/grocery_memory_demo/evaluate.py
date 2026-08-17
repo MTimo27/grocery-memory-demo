@@ -16,19 +16,46 @@ CLAIM_HOLDS_SHARE = 0.5
 def replay(
     memory: list[MemoryItem], history: list[Order], train_weeks: int = TRAIN_WEEKS
 ) -> dict[Arm, Metrics]:
-    train = [order for order in history if order.week <= train_weeks]
-    products_by_topic = {item.topic: claim_products(item, train) for item in memory}
-    results = {arm: Metrics() for arm in Arm}
-    for test_order in [order for order in history if order.week > train_weeks]:
-        known = [order for order in history if order.date < test_order.date]
-        for item in memory:
+    train = []
+    test = []
+    for order in history:
+        if order.week <= train_weeks:
+            train.append(order)
+        else:
+            test.append(order)
+    test.sort(key=lambda order: order.date)
+
+    products_by_topic = {}
+    for item in memory:
+        products_by_topic[item.topic] = claim_products(item, train)
+
+    results = {}
+    for arm in Arm:
+        results[arm] = Metrics()
+
+    rolling = list(memory)
+
+    for test_order in test:
+        known = []
+        for order in history:
+            if order.date < test_order.date:
+                known.append(order)
+
+        for item in rolling:
             as_of = rescored(item, known, test_order.date)
             if as_of is None:
                 continue
+            products = products_by_topic[item.topic]
             for arm in Arm:
                 arm_verdict = verdict(arm, as_of, known, test_order.date)
-                products = products_by_topic[item.topic]
                 _record(results[arm], as_of, arm_verdict, products, test_order)
+
+        revealed = []
+        for item in rolling:
+            products = products_by_topic[item.topic]
+            revealed.append(reinforced(item, products, test_order))
+        rolling = revealed
+
     return results
 
 
@@ -47,6 +74,15 @@ def rescored(item: MemoryItem, known: list[Order], today: date) -> MemoryItem | 
         return None
     as_of = replace(item, evidence_refs=refs, last_evidence=max(evidence_dates(refs, known)))
     return replace(as_of, reliability=reliability(as_of, known, today))
+
+
+def reinforced(item: MemoryItem, products: set[str], revealed: Order) -> MemoryItem:
+    if not products:
+        return item
+    if not _holds(products, revealed):
+        return item
+    refs_including_revealed = item.evidence_refs + [revealed.id]
+    return replace(item, evidence_refs=refs_including_revealed)
 
 
 def claim_products(item: MemoryItem, train: list[Order]) -> set[str]:
