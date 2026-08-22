@@ -69,6 +69,10 @@ class MemoryItem:
     topic: str = ""
     version: int = 1
 
+    def __post_init__(self) -> None:
+        if self.category == HARD_CONSTRAINT and self.status is not Status.EXPLICIT:
+            raise ValueError(f"hard constraint must be explicit: {self.claim!r}")
+
 
 @dataclass
 class Violation:

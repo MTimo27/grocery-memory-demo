@@ -20,8 +20,9 @@ decayed reliability, and a claim asserting the ending would override that.
 
 Field guidance:
   "claim":         one readable sentence, present tense, e.g. "Prefers lactose-free dairy"
-  "category":      hard_constraint = safety/allergy/never-send; dietary_pref = diet or
-                   nutrition pattern; brand_taste = product or brand liking
+  "category":      hard_constraint = an explicitly stated safety/allergy/never-send rule;
+                   never infer one from purchases. dietary_pref = diet or nutrition pattern;
+                   brand_taste = product or brand liking
   "status":        "explicit" if the customer stated it in a note, else "inferred"
   "topic":         short snake_case key for the pattern, e.g. "lactose_free_dairy".
                    It is the identity of the claim across runs - keep it stable.

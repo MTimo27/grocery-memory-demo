@@ -142,6 +142,12 @@ def test_unknown_category_is_rejected():
         memory.build_item(dict(claim_for("keto_diet"), category="vibes"), HISTORY, TODAY)
 
 
+def test_inferred_hard_constraints_are_rejected_during_creation():
+    claim = dict(claim_for("peanut_allergy"), status="inferred")
+    with pytest.raises(ValueError, match="hard constraint must be explicit"):
+        memory.build_item(claim, HISTORY, TODAY)
+
+
 def test_claims_citing_unknown_orders_are_rejected():
     with pytest.raises(ValueError):
         memory.build_item(dict(claim_for("keto_diet"), evidence_refs=["order_99"]), HISTORY, TODAY)
@@ -258,6 +264,13 @@ def test_loading_memory_rejects_an_unknown_category():
     item = to_dict(MEMORY[0])
     item["category"] = "vibes"
     with pytest.raises(ValueError, match="unknown category"):
+        storage.memory_item_from_dict(item)
+
+
+def test_loading_memory_rejects_an_inferred_hard_constraint():
+    item = to_dict(item_for("peanut_allergy"))
+    item["status"] = "inferred"
+    with pytest.raises(ValueError, match="hard constraint must be explicit"):
         storage.memory_item_from_dict(item)
 
 
